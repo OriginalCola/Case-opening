@@ -3,29 +3,49 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faVolumeHigh,
   faWallet,
-  faClover
+  faCircleUp,
+  faFileContract
 } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useState } from 'react';
 
-export const NavBar = () => {
+const NavBar = () => {
+    
+    const [balance, setBalance] = useState(0);
 
     function DepositButton() {
-        window.focus();
         confirm('1000$ deposited');
+        setBalance(balance + 1000)
+        console.log(balance)
     }
 
     return (
         <div className="flex flex-row justify-between items-center p-2.5 border border-astronaut border-solid">
             <div className="flex items-center w-2/5 space-x-5 ">
-                <div>
-                    <h1 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">HumblyGambly</h1>
-                    <FontAwesomeIcon icon={faClover} />
+                <div className='flex items-center'>
+                    <h1 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-yellow-400 mr-0.5">HumblyGambly</h1>
+                    <Image
+                        src="/pot.png"
+                        width={65}
+                        height={65}
+                    />
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center mx-2">
                         <ul className="flex items-center uppercase space-x-4">
-                            <li>
-                                <Link href="/">Deposit</Link>
+                            <li className=''>
+                                <Link className="mx-1" href="/upgrader">
+                                    Upgrader
+                                    <span className='mx-1'>
+                                        <FontAwesomeIcon icon={faCircleUp} />
+                                    </span>
+                                </Link>
+                                <Link className="mx-1" href="/">
+                                    Contracts
+                                    <span className='mx-1'>
+                                        <FontAwesomeIcon icon={faFileContract} />
+                                    </span>
+                                </Link>
                             </li>
                         </ul>
                 </div>
@@ -43,7 +63,7 @@ export const NavBar = () => {
                             />
                         </div>
                     </div>
-                    <h2 className="text-jaffa">5,56 $</h2>
+                    <h2 className="text-jaffa">{balance} $</h2>
                     <button className="btn" onClick={DepositButton}>
                     Deposit
                     <FontAwesomeIcon icon={faWallet} />
