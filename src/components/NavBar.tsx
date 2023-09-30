@@ -24,12 +24,7 @@ const NavBar = () => {
         <div className="flex flex-row justify-between items-center p-2.5 border border-astronaut border-solid">
             <div className="flex items-center w-2/5 space-x-5 ">
                 <div className='flex items-center'>
-                    <h1 className="font-extrabold text-2xl text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-yellow-400 mr-0.5">HumblyGambly</h1>
-                    <Image
-                        src="/pot.png"
-                        width={65}
-                        height={65}
-                    />
+                    <h1 className="font-extrabold text-2xl text-white mr-0.5">HumblyGambly</h1>
                 </div>
                 <div className="flex items-center mx-2">
                         <ul className="flex items-center uppercase space-x-4">

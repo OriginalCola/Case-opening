@@ -2,7 +2,11 @@
 import Wins from "./Wins";
 const Cards = () => {
     return (
-        <div className="">
+        // karta z wartosciami z elementu Wins
+        <div className="flex flex-row justify-center items-center space-x-5">
+            <Wins />
+            <Wins />
+            <Wins />
         </div>
     )
 }
