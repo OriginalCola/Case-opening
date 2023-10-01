@@ -1,11 +1,10 @@
 'use client';
 
-import Image from "next/image";
 const Wins = () => {
     return (
-        <div className=" flex flex-col items-center justify-center w-44 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="flex flex-col items-center justify-center h-48 bg-[url('/blur.png')] rounded-2xl pt-5 mt-8 overflow-none flex-shrink-0">
+            <h5 className=" text-sm text-gray-900 dark:text-white">Mp7 case hardened</h5>
             <img className="p-8 rounded-t-lg" src="/skin.png" alt="product image" />
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">Mp7 case hardened</h5>
         </div>
         
     )

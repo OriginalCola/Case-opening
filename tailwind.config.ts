@@ -9,6 +9,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-test': 'linear-gradient(147deg, rgba(241, 154, 56, 0.00) 84.73%, #F19A38 90.52%, #EDF138 97.01%)',
         'gradient-conic':
         'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'circle-strokes': "url('/bg.png')",
